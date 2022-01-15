@@ -14,7 +14,7 @@
 
     function MaintenanceMode() {
         global $db;
-        $stmt = $db->prepare("SELECT status FROM general");
+        $stmt = $db->prepare("SELECT status FROM tablename");
         $stmt->execute();
         while ($row = $stmt->fetch()) {
             if($row['status'] == 0) {
